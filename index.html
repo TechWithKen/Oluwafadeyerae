@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- TITLE (browser tab) -->
+  <title>A Beautiful Accident, A Deliberate Choice ❤️</title>
+  <meta name="description" content="Our story, the things I love about you, and a question from my heart.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1b3a73">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2349b3b8' d='M16 28s-11-6.6-11-15A6 6 0 0 1 16 9a6 6 0 0 1 11 4c0 8.4-11 15-11 15z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<!--
+  =====================================================================
+  HOW TO CUSTOMISE (no JavaScript knowledge needed)
+  =====================================================================
+  BACKGROUND PHOTO .. script.js → BACKGROUND (which photo fills the screen)
+                      The two <img> tags with class "bg__img" below also
+                      point to it, so the background shows even without JS.
+  OTHER PHOTOS ...... Search this file for "PHOTO 02" … "PHOTO 06".
+                      Change src="…" if your file names differ, and replace
+                      each alt="…" with a short description of the photo.
+  SONGS ............. script.js → SOUNDTRACK
+  SONG PER CHAPTER .. script.js → SONG_MAP
+  THE LETTER ........ Right here, chapter by chapter (search "CHAPTER 1").
+                      Each <div class="page"> is one page she turns.
+  TITLE / SUBTITLE .. Search "OPENING".
+  THE QUESTION ...... Search "THE QUESTION".
+  ANSWER MESSAGES ... script.js → ANSWER_MESSAGES
+  COLOURS / TINT .... styles.css → :root at the very top
+  =====================================================================
+-->
+
+<body>
+  <!-- Full-screen background photo + colour tint -->
+  <div class="bg" aria-hidden="true">
+    <img class="bg__img bg__img--fill" src="image1.JPG" alt="">
+    <img class="bg__img bg__img--main" src="image1.JPG" alt="">
+    <div class="bg__tint"></div>
+  </div>
+
+  <main class="stage" id="stage">
+
+    <!-- ============================== OPENING ============================== -->
+    <section class="scene scene--opening is-active" id="opening" aria-labelledby="site-title">
+      <div class="opening">
+        <p class="opening__eyebrow">A letter, just for you</p>
+        <h1 class="opening__title" id="site-title" aria-label="A Beautiful Accident, A Deliberate Choice">
+          <span class="opening__line" data-type>A Beautiful Accident,</span>
+          <span class="opening__line opening__line--accent" data-type>A Deliberate Choice</span>
+        </h1>
+        <p class="opening__subtitle">Our story, the things I love about you, and a question from my heart.</p>
+        <p class="opening__invite">I made something for you. Take your time.</p>
+        <a class="btn btn--light" id="begin" href="#chapter-1">Begin our story</a>
+        <p class="opening__note">There&rsquo;s music. Sound on, if you can.</p>
+      </div>
+    </section>
+
+    <!-- =========================== CHAPTER MAP ============================ -->
+    <section class="scene scene--map" id="map" aria-labelledby="map-title">
+      <div class="map">
+        <p class="map__eyebrow">Our story in five parts</p>
+        <h2 class="map__title" id="map-title">Open them in order</h2>
+        <ol class="tiles" id="tiles">
+          <li><button class="tile" type="button" data-open="1"><span class="tile__num">1</span><span class="tile__name">How It All Began</span><span class="tile__state"></span></button></li>
+          <li><button class="tile" type="button" data-open="2"><span class="tile__num">2</span><span class="tile__name">The Unexpected Journey</span><span class="tile__state"></span></button></li>
+          <li><button class="tile" type="button" data-open="3"><span class="tile__num">3</span><span class="tile__name">The Things I Love About You</span><span class="tile__state"></span></button></li>
+          <li><button class="tile" type="button" data-open="4"><span class="tile__num">4</span><span class="tile__name">Will You Take This Ride With Me?</span><span class="tile__state"></span></button></li>
+          <li><button class="tile tile--question" type="button" data-open="question"><span class="tile__num">5</span><span class="tile__name">The Question</span><span class="tile__state"></span></button></li>
+        </ol>
+        <p class="map__hint" id="map-hint" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ============================== READER ============================== -->
+    <section class="scene scene--reader" id="reader" aria-label="The letter">
+      <div class="reader">
+        <div class="reader__bar">
+          <p class="reader__where" id="reader-where">Chapter 1</p>
+          <button class="reader__close" id="reader-close" type="button" aria-label="Back to the chapters">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+
+        <div class="reader__scroll" id="reader-scroll" tabindex="-1">
+          <div class="chapters" id="chapters">
+
+            <!-- ============================ CHAPTER 1 ============================ -->
+            <article class="chapter" id="chapter-1" data-chapter="1" aria-labelledby="ch1-title">
+              <header class="chapter__head">
+                <p class="chapter__num">Chapter 01</p>
+                <h2 class="chapter__title" id="ch1-title">How It All Began</h2>
+                <p class="chapter__kicker">On a platform called Barracks</p>
+              </header>
+
+              <div class="page">
+                <blockquote class="epigraph">
+                  <p>&ldquo;In the beginning was the Word, and the Word was with God, and the Word was God.&rdquo;</p>
+                  <cite>John 1:1</cite>
+                </blockquote>
+                <p class="lede">And somewhere in the middle of all that, there was you. ❤️</p>
+                <p>Funny how life works. Sometimes the most beautiful beginnings come from moments that seem ordinary at first.</p>
+              </div>
+
+              <div class="page">
+                <p>Our story began on a platform called Barracks, where we were both taking part in a 30-day journey of fasting and prayer. At the end of the programme, participants began introducing themselves, sharing pictures, where they were based, and little details about who they were.</p>
+                <p>You did your introduction that morning, but I missed it. I had muted everyone&rsquo;s statuses, so your introduction passed me by completely.</p>
+              </div>
+
+              <div class="page">
+                <p class="beat">Then came the evening.</p>
+                <p>I was talking with my close friend, Kike, when she mentioned she had posted something about me. Naturally, I went to check. And while I was going through the statuses, I stumbled upon your introduction from that morning.</p>
+                <p class="lede">And then&hellip; who was this girl? 😂❤️</p>
+              </div>
+
+              <div class="page">
+                <!-- PHOTO 02 — the photo where her smile is clearest -->
+                <figure class="photo" data-label="Photo 02">
+                  <img src="image2.jpg" alt="Photograph 2 — replace with a short description of what is visible" loading="lazy" decoding="async">
+                </figure>
+                <p>Let me be honest. Your smile caught my attention first, then your teeth. Yes, your teeth deserve their own special mention, because they clearly made quite an impression on me. Then came your face card, which wasn&rsquo;t helping matters either. 😂</p>
+                <p>Before I knew it, curiosity had taken over. Who was this beautiful girl? What was she like? What would talking to her feel like?</p>
+              </div>
+
+              <div class="page">
+                <p>I wanted your number, but then I thought: why collect it from someone else when I could get it directly from the group chat? So I went looking for your introduction and eventually found my way into your messages.</p>
+                <p class="beat">And just like that, we started talking.</p>
+                <p>I had no idea what would come of that first message. I certainly didn&rsquo;t imagine that the girl whose introduction I almost missed would become someone I&rsquo;d write a whole love letter to.</p>
+                <p>But here we are. And I&rsquo;m glad I found that status, discovered your smile, and decided to say hello.</p>
+                <p class="lede">Who would have thought that something so simple could become the beginning of a story I&rsquo;d be this happy to tell?</p>
+              </div>
+            </article>
+
+            <!-- ============================ CHAPTER 2 ============================ -->
+            <article class="chapter" id="chapter-2" data-chapter="2" aria-labelledby="ch2-title">
+              <header class="chapter__head">
+                <p class="chapter__num">Chapter 02</p>
+                <h2 class="chapter__title" id="ch2-title">The Unexpected Journey</h2>
+                <p class="chapter__kicker">The chat I deleted, and came back to</p>
+              </header>
+
+              <div class="page">
+                <p>When we started talking, you seemed cool and calm. At least you were replying to my messages, so I counted that as a good start. 😂</p>
+                <p>Gradually, we became familiar with each other, but our beginning wasn&rsquo;t entirely smooth.</p>
+                <p>There was that time you were busy trying to sort some things out. I kept asking whether you were free, and you told me not to ask you that question again.</p>
+                <p class="aside-line">And me? I felt like you had shouted at me. 😂</p>
+              </div>
+
+              <div class="page">
+                <p>Honestly, I didn&rsquo;t want to talk anymore. I think that&rsquo;s what made me delete our chat, even though I had told myself I wouldn&rsquo;t.</p>
+                <p>The funniest part is that I had already been telling Kike about you. Imagine talking about a girl to your friend, then deleting your conversation with that same girl because you felt some type of way. 😂</p>
+                <p>But I think I was trying not to get attached. I had things I wanted to focus on, goals I wanted to pursue, and a life I was still figuring out. Getting emotionally invested in someone wasn&rsquo;t exactly part of the plan.</p>
+              </div>
+
+              <div class="page">
+                <p>So I deleted the chat, thinking that would be <span class="strike">the end of it</span>.</p>
+                <p class="beat">Except it wasn&rsquo;t.</p>
+                <p>I came back, even after telling myself I wouldn&rsquo;t text you again. Somehow, I found my way back into your messages, and we kept talking.</p>
+                <p>Looking back, I find that part of our story especially funny. I was trying so hard not to get attached, yet I kept returning to the very conversation I had decided to leave behind.</p>
+              </div>
+
+              <div class="page">
+                <!-- PHOTO 03 -->
+                <figure class="photo" data-label="Photo 03">
+                  <img src="image3.jpg" alt="Photograph 3 — replace with a short description of what is visible" loading="lazy" decoding="async">
+                </figure>
+                <p>Imagine if I had never texted again. One small misunderstanding, and that could have been the end of a connection that has brought me so much happiness.</p>
+                <p>I&rsquo;m not saying we&rsquo;ll never misunderstand each other again. We&rsquo;re different people, and there will always be things to learn about one another. But I&rsquo;m glad I gave myself another chance to know you, instead of letting one moment define the whole experience.</p>
+              </div>
+
+              <div class="page">
+                <p>And somewhere between those conversations, the awkward moments, and our growing familiarity, this connection began to mean something to me.</p>
+                <p class="lede">What started as curiosity about a beautiful girl became a genuine interest in the person behind the pictures.</p>
+                <p>And now, almost a month later, here I am, wondering how the girl I almost didn&rsquo;t get to know became someone I want to be intentional about.</p>
+                <p class="beat">Funny how things turn out, isn&rsquo;t it?</p>
+              </div>
+            </article>
+
+            <!-- ============================ CHAPTER 3 ============================ -->
+            <article class="chapter" id="chapter-3" data-chapter="3" aria-labelledby="ch3-title">
+              <header class="chapter__head">
+                <p class="chapter__num">Chapter 03</p>
+                <h2 class="chapter__title" id="ch3-title">The Things I Love About You</h2>
+                <p class="chapter__kicker">Let me count the ways</p>
+              </header>
+
+              <div class="page">
+                <p class="lede">Now, let&rsquo;s talk about you.</p>
+                <p>As Elizabeth Barrett Browning asks in her famous sonnet:</p>
+                <blockquote class="epigraph">
+                  <p>&ldquo;How do I love thee? Let me count the ways.&rdquo;</p>
+                  <cite>Sonnet 43</cite>
+                </blockquote>
+                <p>And honestly, beautiful girl, where do I even begin? ❤️</p>
+                <p>Of course, your smile, your teeth, and your face card deserve their flowers. 😂 But beyond all that, there&rsquo;s so much about you that I genuinely appreciate.</p>
+              </div>
+
+              <div class="page">
+                <p>I love your humour and the little things that make our conversations enjoyable. I love your curiosity, and your willingness to explore ideas and discover new things. I think it would be beautiful to have someone I can laugh with over the most unserious things one moment, and have meaningful conversations with the next.</p>
+                <p>I love that you enjoy movies and series. I look forward to sharing those with you, even if we occasionally have to negotiate what we&rsquo;re watching. 😂</p>
+                <p>I appreciate your taste in music, too, even though I&rsquo;m still not convinced you have any. Please, let&rsquo;s leave that discussion for another day. 😂</p>
+              </div>
+
+              <div class="page">
+                <p class="lede">More importantly, I admire <span class="mark">your relationship with God</span>. I love that you love Him and want to grow in Him.</p>
+                <p>That means a lot to me, because I want a relationship where we can encourage each other spiritually, learn together, and stay intentional about the values that guide our lives.</p>
+                <p>I know neither of us has everything figured out, but I appreciate your desire to grow spiritually, and I would love for us to nurture that together.</p>
+              </div>
+
+              <div class="page">
+                <!-- PHOTO 04 -->
+                <figure class="photo" data-label="Photo 04">
+                  <img src="image4.jpg" alt="Photograph 4 — replace with a short description of what is visible" loading="lazy" decoding="async">
+                </figure>
+                <p>I also admire your humility, kindness, thoughtfulness, and generosity. I appreciate your elegance, the way you carry yourself, and the calm I associate with your presence. There&rsquo;s something beautiful about getting to know someone whose personality gives you reasons to appreciate them beyond physical attraction.</p>
+                <p>And then there&rsquo;s your business-minded side. I love that you can be particular and strategic about your business. It&rsquo;s lovely to see that you have your own interests, ambitions, and things you care about.</p>
+              </div>
+
+              <div class="page">
+                <!-- PHOTO 05 — a close portrait works well here -->
+                <figure class="photo" data-label="Photo 05">
+                  <img src="image6.jpg" alt="Photograph 5 — replace with a short description of what is visible" loading="lazy" decoding="async">
+                </figure>
+                <p>Physically, I love your eyes, your smile, your teeth (yes, those teeth again), and your beauty. And let&rsquo;s not forget your height. 😂❤️</p>
+                <p>I also have to commend your taste in men. Honestly, <span class="mark">excellent taste</span>. I mean, look at me. What more evidence do we need? 😂😂</p>
+              </div>
+
+              <div class="page">
+                <p class="lede">But jokes aside, what I appreciate most is that you are so much <span class="mark">more than a pretty face</span> or a list of admirable qualities.</p>
+                <p>You&rsquo;re a person with your own thoughts, dreams, interests, and experiences, and I&rsquo;m excited to discover more of what makes you who you are.</p>
+                <p>I know we still have plenty to learn about each other, but I already appreciate the person I&rsquo;m getting to know.</p>
+                <p>Thank you for the love and care you&rsquo;ve shown me, for the conversations we&rsquo;ve shared, and for making this beginning such a beautiful experience.</p>
+                <p>You came into my life when I wasn&rsquo;t looking for a relationship, yet knowing you has made me reconsider what I thought I wanted.</p>
+                <p class="beat">And that&rsquo;s something I don&rsquo;t take lightly.</p>
+              </div>
+            </article>
+
+            <!-- ============================ CHAPTER 4 ============================ -->
+            <article class="chapter" id="chapter-4" data-chapter="4" aria-labelledby="ch4-title">
+              <header class="chapter__head">
+                <p class="chapter__num">Chapter 04</p>
+                <h2 class="chapter__title" id="ch4-title">Will You Take This Ride With Me?</h2>
+                <p class="chapter__kicker">The bold step</p>
+              </header>
+
+              <div class="page">
+                <p>Before meeting you, I had decided that love wasn&rsquo;t something I wanted to pursue at this point in my life. I had goals to accomplish, dreams to chase, and things I was still trying to figure out.</p>
+                <p>I thought I would leave relationships for another time.</p>
+                <p class="beat">Then I met you.</p>
+                <p>Meeting you hasn&rsquo;t suddenly answered every question I have about life, but it has made me reconsider the possibility of sharing the journey with someone.</p>
+                <p>I&rsquo;ve realised that I don&rsquo;t need every part of my life perfectly arranged before I can choose to build something meaningful with another person.</p>
+                <p class="lede">And you are someone I would love to build with.</p>
+              </div>
+
+              <div class="page">
+                <p>I want us to grow together, make an impact, and encourage each other in our individual pursuits. I want us to explore new places, visit restaurants and cinemas, go on adventures, watch movies, and create memories that will make us laugh when we look back on them.</p>
+                <p>I want us to get curious together, learn from each other, and have conversations that challenge our thinking. I want us to make wise financial decisions, pursue opportunities, and work towards a future we can both be proud of.</p>
+                <p>I also want us to keep growing spiritually, encouraging each other in faith while building a relationship grounded in honesty, respect, patience, and understanding.</p>
+              </div>
+
+              <div class="page">
+                <p>I don&rsquo;t expect us to be perfect. I know there will be things to learn, differences to navigate, and moments that will ask us to be more patient with each other.</p>
+                <p>But I want us to meet those moments with a willingness to communicate, understand, and grow.</p>
+                <p>I want us to be lovers and friends: two people who can laugh together, talk openly, support each other&rsquo;s ambitions, and enjoy the beautiful things life has to offer without losing sight of what truly matters.</p>
+                <p class="lede">And the truth is, I want to experience all of that with you.</p>
+              </div>
+
+              <div class="page">
+                <p>I know we&rsquo;ve only been getting to know each other for a short time. There&rsquo;s still so much about you I haven&rsquo;t discovered, and I won&rsquo;t pretend otherwise. But I believe this connection is worth exploring intentionally, and I&rsquo;m willing to take that bold step.</p>
+                <p class="lede">So, beautiful girl, this is me telling you that I love you, I appreciate you, and I would love to be with you.</p>
+                <p>I&rsquo;m not promising you a perfect story. I&rsquo;m asking for the chance to build a meaningful one together.</p>
+              </div>
+
+              <div class="page">
+                <!-- PHOTO 06 — something calm; a photo of you two together, if you have one -->
+                <figure class="photo" data-label="Photo 06">
+                  <img src="image1.jpg" alt="Photograph 6 — replace with a short description of what is visible" loading="lazy" decoding="async">
+                </figure>
+                <p>Perhaps one day we&rsquo;ll look back at how it all started and laugh about it: Barracks, the 30 days of fasting and prayer, the introduction I almost missed, the smile that caught my attention, the messages, the misunderstanding, and the boy who deleted a chat only to come back again.</p>
+                <p>And maybe we&rsquo;ll smile at the fact that what began with a simple introduction became something we both chose to nurture.</p>
+                <p class="lede">I&rsquo;m glad I sent that first message. And now, I want to find out what the next chapter could look like with you.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <nav class="reader__nav" aria-label="Pages">
+          <button class="pager pager--prev" id="page-prev" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            <span>Back</span>
+          </button>
+          <div class="dots" id="page-dots" aria-hidden="true"></div>
+          <p class="visually-hidden" id="page-status" aria-live="polite"></p>
+          <button class="pager pager--next" id="page-next" type="button">
+            <span id="page-next-label">Next</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============================ THE QUESTION ============================ -->
+    <section class="scene scene--question" id="question" aria-labelledby="the-question">
+      <div class="question">
+        <p class="question__lead q-line">So, here&rsquo;s my question.</p>
+        <h2 class="question__ask q-line" id="the-question">Would you like to take this ride with me?</h2>
+        <p class="question__more q-line">Would you like us to grow together, learn together, laugh together, pray together, explore the world together, and build something beautiful?</p>
+        <p class="question__final q-line">Would you like to give us a chance?</p>
+        <p class="question__hearts q-line" aria-hidden="true">❤️🥹</p>
+
+        <div class="signoff q-line">
+          <p>With love, sincerity, and excitement for what we could become,</p>
+          <p class="signoff__name">Yours, hopefully, in the chapters to come. ❤️</p>
+        </div>
+
+        <!-- Nothing is sent anywhere. Messages: script.js → ANSWER_MESSAGES -->
+        <div class="answer q-line" role="group" aria-labelledby="answer-label">
+          <p class="answer__label" id="answer-label">Whenever you&rsquo;re ready</p>
+          <div class="answer__buttons">
+            <button class="btn btn--answer" type="button" data-answer="yes" aria-pressed="false">I&rsquo;d love to</button>
+            <button class="btn btn--answer" type="button" data-answer="talk" aria-pressed="false">I&rsquo;d like to talk about it</button>
+          </div>
+          <p class="answer__message" id="answer-message" aria-live="polite"></p>
+        </div>
+
+        <button class="question__again q-line" id="read-again" type="button">Read our story again</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Soundtrack player -->
+  <aside class="player" id="player" aria-label="Soundtrack" hidden>
+    <button class="player__btn" id="player-prev" type="button" aria-label="Previous song">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zM19 5v14L9 12z"/></svg>
+    </button>
+    <button class="player__btn player__btn--main" id="player-toggle" type="button" aria-label="Play music">
+      <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
+      <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+    </button>
+    <button class="player__btn" id="player-next" type="button" aria-label="Next song">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2zM5 5v14l10-7z"/></svg>
+    </button>
+    <div class="player__info">
+      <span class="player__label" id="player-label">Soundtrack</span>
+      <span class="player__title" id="player-title">Song 1</span>
+    </div>
+    <span class="player__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <button class="player__btn player__btn--ghost" id="player-mute" type="button" aria-label="Mute" aria-pressed="false">
+      <svg class="i-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="stroke" d="M15.5 9a4 4 0 0 1 0 6M17.8 6.6a7.5 7.5 0 0 1 0 10.8"/></svg>
+      <svg class="i-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="stroke" d="M15.5 9.5l5 5m0-5l-5 5"/></svg>
+    </button>
+    <p class="visually-hidden" id="player-announce" role="status"></p>
+  </aside>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -22,7 +22,7 @@
    tags near the top of index.html so it shows even before this file loads.
    --------------------------------------------------------------------- */
 const BACKGROUND = {
-  photo: './image1.jpg',
+  photo: './image1.JPG',
   focus: '50% 25%',
   question: ''
 };
